@@ -15,6 +15,7 @@ public class Program {
 		Seller seller = new Seller(21, "Felipe", "felipe1@gmail.com", new Date(), 10000.00, obj);
 		System.out.println(seller);
 		
+		
 
 	}
 
