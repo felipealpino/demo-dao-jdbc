@@ -44,7 +44,7 @@ public class SellerDaoJDBC implements SellerDao {
 			int rowsAffected = st.executeUpdate();
 
 			if (rowsAffected > 0) {
-				rs = st.getGeneratedKeys(); // pegando ids dados gerados pela query
+				rs = st.getGeneratedKeys(); // pegando id gerado pela query
 				if (rs.next()) {
 					int id = rs.getInt(1); // 1 significa o numero da coluna na table (id)
 					obj.setId(id); // fazendo com que o objeto fique com o novo id
