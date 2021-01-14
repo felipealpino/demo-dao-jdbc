@@ -32,9 +32,18 @@ public class Program {
 		System.out.println();
 		System.out.println("=== TESTE 4: seller Insert ===");
 		//department criado no teste 2
-		Seller newSeller = new Seller(null, "Gregorio", "gregorio@hotmail.com", new Date(), 4000.0, department);
+		Seller newSeller = new Seller(null, "Jorge", "Jogin@hotmail.com", new Date(), 5000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserido! Novo id: " +newSeller.getId());;
+		
+		
+		System.out.println();
+		System.out.println("=== TESTE 5: seller Update ===");
+		//department criado no teste 2
+		seller = sellerDao.findById(7); // pegando o item no id 7 -- Felipe Gontijo 
+		seller.setEmail("felipeSinerd@codingHard.com"); // Setando um diferente email para o objeto
+		sellerDao.update(seller); // fazendo o update do novo objeto 
+		System.out.println("Modificado! " + seller );
 		
 	}
 
